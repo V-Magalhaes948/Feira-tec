@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS `feitaTecnica` DEFAULT CHARACTER SET utf8 ;
+USE `feitaTecnica` ;
