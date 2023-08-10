@@ -24,6 +24,16 @@ class Banco{
         return $this->con;
         
     }
+    
+    public function selectAll($table)
+    {
+        $query = "select * from $table";
+        $stmt = $this->getConexao()->prepare($query);   
+        $stmt->execute();  //executa a  instrução sql no sgbd
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
 
-   }
+}
    
